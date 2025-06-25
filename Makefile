@@ -6,7 +6,7 @@ JAVAC = javac
 CFLAGS = -pthread 
 
 # Nombres de los ejecutables
-TARGETS = MergeSortTask.class QuickSortTask.class sudoku
+TARGETS = MergeSortTask.class QuickSortTask.class BenchmarkSorting.class sudoku
 
 .PHONY: all clean
 
@@ -19,6 +19,9 @@ MergeSortTask.class: MergeSortTask.java
 QuickSortTask.class: QuickSortTask.java
 	$(JAVAC) QuickSortTask.java
 
+BenchmarkSorting.class: BenchmarkSorting.java
+	$(JAVAC) BenchmarkSorting.java
+
 # Regla para C
 sudoku: sudoku.c
 	$(CC) $(CFLAGS) -o sudoku sudoku.c
@@ -29,6 +32,9 @@ run-mergesort: MergeSortTask.class
 
 run-quicksort: QuickSortTask.class
 	java QuickSortTask $(ARGS)
+
+run-benchmarksort: BenchmarkSorting.class
+	java BenchmarkSorting
 
 run-sudoku: sudoku
 	./sudoku $(ARGS)
