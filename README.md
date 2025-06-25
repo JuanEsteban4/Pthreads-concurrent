@@ -3,7 +3,7 @@
 
 Este repositorio contiene dos proyectos multihilo desarrollados en el contexto de concurrencia y paralelismo, inspirados en *Operating System Concepts*:
 
-1. **Validador multihilo de Sudoku** (C, con 27 hilos usando pthreads).
+1. **Validador multihilo de Sudoku** (C, con 27 hilos (caso base) usando pthreads).
 2. **Ordenamiento paralelo en Java** (Fork/Join con QuickSort y MergeSort híbrido con InsertionSort).
 
 ---
